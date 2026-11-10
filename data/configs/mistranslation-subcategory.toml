@@ -1,0 +1,4 @@
+[categories]
+positive = ["crash", "optimization", "memory", "vector", "flag", "computation"]
+negative = []
+architectures = []
