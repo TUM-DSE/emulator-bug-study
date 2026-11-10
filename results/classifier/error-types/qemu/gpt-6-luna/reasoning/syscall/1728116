@@ -1,0 +1,2 @@
+syscall
+The report shows QEMU’s emulated `/proc/self/auxv` returns no data because its virtualized file length is incorrect.

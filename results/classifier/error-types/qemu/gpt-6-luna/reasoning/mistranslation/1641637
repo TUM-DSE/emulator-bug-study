@@ -1,0 +1,2 @@
+mistranslation
+QEMU reports SIGILL for valid SSE-family instructions that execute successfully on real hardware, indicating incorrect guest instruction decoding or emulation.

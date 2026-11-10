@@ -1,0 +1,2 @@
+syscall
+The report traces the bug to errno conversion in the emulated `IP_RECVERR` and `IPV6_RECVERR` control messages.

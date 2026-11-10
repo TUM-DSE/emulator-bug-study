@@ -1,0 +1,2 @@
+runtime
+The report describes Firebird crashing during `pthread_mutex_init` but does not trace the failure to an instruction-emulation or system-call error.

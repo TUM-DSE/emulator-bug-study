@@ -1,0 +1,2 @@
+mistranslation
+The report identifies incorrect `float64_to_floatx80` results in the i386 `fldl` instruction, whose behavior changes with the FPU control word’s precision bits.

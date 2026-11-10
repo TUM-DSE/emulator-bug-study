@@ -1,0 +1,2 @@
+syscall
+The reported heap growth occurs after the guest calls `mmap` and `munmap`, pointing to incorrect emulation of those system calls.

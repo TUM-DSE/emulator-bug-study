@@ -1,0 +1,2 @@
+syscall
+The report identifies an incorrect target `epoll_event` structure layout, causing epoll events to be misread and the process to wait indefinitely.

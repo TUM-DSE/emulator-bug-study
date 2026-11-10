@@ -1,0 +1,2 @@
+mistranslation
+The report traces the incorrect vector data to `ldff1d` when the gather destination and index registers are the same, while the instruction works correctly on real SVE hardware.

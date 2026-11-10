@@ -1,0 +1,2 @@
+runtime
+The report requests a binfmt wrapper change to how `argv[0]` is handled, not an instruction-emulation or system-call fix.

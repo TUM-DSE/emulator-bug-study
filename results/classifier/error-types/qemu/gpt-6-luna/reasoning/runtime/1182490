@@ -1,0 +1,2 @@
+runtime
+The crash occurs in QEMU’s coroutine management when it dereferences a NULL `to` pointer, not during guest instruction translation or a system call.

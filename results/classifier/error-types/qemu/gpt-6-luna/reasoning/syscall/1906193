@@ -1,0 +1,2 @@
+syscall
+The child exits with status 42, but the parent receives 40 from `wait()`, indicating incorrect handling of the wait syscall’s status.

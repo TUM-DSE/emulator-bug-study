@@ -1,0 +1,2 @@
+runtime
+`getauxval(AT_HWCAP2)` omits the MTE capability bit, indicating an issue with the auxiliary vector rather than instruction emulation or a system call.

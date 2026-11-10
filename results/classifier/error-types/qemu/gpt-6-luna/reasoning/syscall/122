@@ -1,0 +1,2 @@
+syscall
+The report says linux-user fails to check `PROT_EXEC`, indicating incorrect handling of memory-protection flags in a system-call-related operation.

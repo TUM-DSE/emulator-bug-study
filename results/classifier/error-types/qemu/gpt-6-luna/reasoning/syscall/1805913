@@ -1,0 +1,2 @@
+syscall
+The report attributes EOVERFLOW to QEMU passing through 64-bit host `getdents64` inode and offset values instead of providing values compatible with the 32-bit guest.

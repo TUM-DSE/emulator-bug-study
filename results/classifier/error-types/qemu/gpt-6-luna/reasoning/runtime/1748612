@@ -1,0 +1,2 @@
+runtime
+The bug is that `-strace` output uses `gemu_log` instead of `qemu_log`, so `-D` does not redirect it to the log file.

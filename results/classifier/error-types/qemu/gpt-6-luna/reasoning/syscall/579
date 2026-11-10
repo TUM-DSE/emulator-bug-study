@@ -1,0 +1,2 @@
+syscall
+The report identifies `chown()` returning “Operation not permitted” under QEMU even though the same program succeeds on native sparc64.

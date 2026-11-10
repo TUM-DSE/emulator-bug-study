@@ -1,0 +1,2 @@
+runtime
+QEMU aborts on an assertion in `page_set_flags` while launching the guest, with no specific instruction or system-call emulation identified as the cause.

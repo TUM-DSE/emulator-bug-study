@@ -1,0 +1,2 @@
+mistranslation
+The report identifies incorrect emulation of AArch64 `sqshrn` and its rounding variant, with results differing from real hardware.

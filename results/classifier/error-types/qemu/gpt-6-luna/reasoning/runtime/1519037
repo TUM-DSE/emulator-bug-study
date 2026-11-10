@@ -1,0 +1,2 @@
+runtime
+The report describes unexplained segfaults that disappear under gdb or strace, without tracing them to an instruction or system call.

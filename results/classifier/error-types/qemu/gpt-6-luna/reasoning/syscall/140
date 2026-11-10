@@ -1,0 +1,2 @@
+syscall
+The report identifies `clone()` handling as the cause of `posix_spawn()` failing, pointing to incorrect system-call emulation.

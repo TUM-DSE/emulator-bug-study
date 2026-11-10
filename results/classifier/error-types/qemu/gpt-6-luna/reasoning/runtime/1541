@@ -1,0 +1,2 @@
+runtime
+The report describes a C++ compiler rejecting QEMU’s `G_NORETURN` declaration during the build, not an instruction or system-call emulation error.

@@ -1,0 +1,2 @@
+mistranslation
+The `tlbivax` instruction truncates effective addresses to 32 bits, so it fails to invalidate TLB entries above 4 GiB.

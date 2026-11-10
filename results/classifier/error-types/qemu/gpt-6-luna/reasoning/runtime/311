@@ -1,0 +1,2 @@
+runtime
+The report concerns unsupported real-time signal handling for SPARC guests, not instruction translation or a system call.

@@ -1,0 +1,2 @@
+mistranslation
+The report traces the crash to emulating the specific RISC-V `vfncvt.rtz.x.f.w` instruction, which triggers an assertion in the instruction translator.

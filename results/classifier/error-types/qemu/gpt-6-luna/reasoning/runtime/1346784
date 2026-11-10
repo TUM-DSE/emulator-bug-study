@@ -1,0 +1,2 @@
+runtime
+The guest’s `/proc/self/maps` exposes QEMU’s own memory areas, indicating an issue with guest process memory-map reporting rather than instruction translation or a specific system call.

@@ -1,0 +1,2 @@
+mistranslation
+The report shows that qemu-ppc produces a different float32 result for a guest memory reinterpretation than real PowerPC hardware, implicating instruction emulation.

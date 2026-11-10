@@ -1,0 +1,2 @@
+runtime
+The report describes a SIGSEGV despite the address being mapped, but does not trace the failure to an instruction or system call.

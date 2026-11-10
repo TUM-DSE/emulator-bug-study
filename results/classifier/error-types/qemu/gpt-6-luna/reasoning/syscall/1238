@@ -1,0 +1,2 @@
+syscall
+The trace shows `fadvise64` and `fallocate` returning `EINVAL`; the reported failure is tied to emulation of these system calls.

@@ -1,0 +1,2 @@
+syscall
+The report identifies incorrect `waitid` behavior: QEMU fails to properly populate the target siginfo structure when `info.si_pid` is zero.

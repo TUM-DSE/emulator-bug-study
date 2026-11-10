@@ -1,0 +1,2 @@
+syscall
+The report identifies `wait4`/`waitpid` returning an incorrect value for the guest process.

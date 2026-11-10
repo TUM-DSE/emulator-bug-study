@@ -1,0 +1,2 @@
+mistranslation
+The report states that QEMU computes SUBV’s result correctly but fails to set the T flag on underflow, unlike real hardware.

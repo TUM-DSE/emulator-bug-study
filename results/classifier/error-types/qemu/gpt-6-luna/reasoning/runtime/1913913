@@ -1,0 +1,2 @@
+runtime
+The report traces the failure to `sigcontext->trapno` being set to `-1`, which confuses WINE’s signal-based exception handling.

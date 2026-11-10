@@ -1,0 +1,2 @@
+runtime
+The report describes a crash during repeated `exec` calls under ARM user emulation, without identifying an incorrectly emulated instruction or system call.

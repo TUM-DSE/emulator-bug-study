@@ -1,0 +1,2 @@
+syscall
+The report says QEMU’s emulation of `clone()` returns `EINVAL`, while the same program succeeds natively.

@@ -1,0 +1,2 @@
+runtime
+The report attributes the hang to signal handling between threads, not to guest instruction translation or a specific system call.

@@ -1,0 +1,2 @@
+runtime
+The binary lacks an `_start` entry point, and the report does not trace the resulting illegal instruction to incorrect emulation of a specific guest instruction.

@@ -1,0 +1,2 @@
+runtime
+The failure occurs while allocating the guest commpage, and changing the guest address-space base avoids it; no instruction or system call is implicated.

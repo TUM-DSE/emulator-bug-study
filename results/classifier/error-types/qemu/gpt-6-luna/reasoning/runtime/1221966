@@ -1,0 +1,2 @@
+runtime
+The report shows a SIGSEGV in `static_code_gen_buffer` but does not trace it to an incorrectly emulated guest instruction or system call.

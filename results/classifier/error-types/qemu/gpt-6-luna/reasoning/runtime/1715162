@@ -1,0 +1,2 @@
+runtime
+The report traces QEMU’s crash to its signal-handling and core-dump path, not to a specific guest instruction or system call.

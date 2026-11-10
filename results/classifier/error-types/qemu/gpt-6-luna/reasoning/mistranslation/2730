@@ -1,0 +1,2 @@
+mistranslation
+The report says the `lw` instruction produces an incorrect value in `a1` (`0xffffffff`).

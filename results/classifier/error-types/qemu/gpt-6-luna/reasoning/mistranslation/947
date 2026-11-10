@@ -1,0 +1,2 @@
+mistranslation
+The generated AArch64 code truncates the helper address’s upper 32 bits, causing a branch to the wrong address.

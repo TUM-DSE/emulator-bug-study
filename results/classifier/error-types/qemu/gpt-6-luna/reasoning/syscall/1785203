@@ -1,0 +1,2 @@
+syscall
+The crash occurs in `do_syscall` while converting the invalid pointer passed to `mincore`, which triggers an assertion instead of returning an error.

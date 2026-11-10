@@ -1,0 +1,2 @@
+runtime
+The report identifies incorrect AVX/AVX2 detection in user mode but does not establish an instruction translation or system call error.

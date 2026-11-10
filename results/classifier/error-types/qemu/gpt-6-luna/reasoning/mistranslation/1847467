@@ -1,0 +1,2 @@
+mistranslation
+The report says QEMU incorrectly applies a DS prefix in 64-bit mode instead of ignoring it and using the FS base for the memory reference.

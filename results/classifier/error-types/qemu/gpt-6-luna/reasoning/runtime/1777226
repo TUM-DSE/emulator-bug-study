@@ -1,0 +1,2 @@
+runtime
+The configure script is confused by QEMU’s warning output, which is a userland runtime behavior rather than incorrect instruction emulation or syscall handling.

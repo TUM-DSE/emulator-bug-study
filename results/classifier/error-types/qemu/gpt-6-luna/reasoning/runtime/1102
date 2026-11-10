@@ -1,0 +1,2 @@
+runtime
+The crash occurs in ELF loading when `bss_zero` writes to a non-writable segment, not during guest instruction translation or a system call.

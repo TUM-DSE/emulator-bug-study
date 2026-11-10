@@ -1,0 +1,2 @@
+runtime
+The report describes QEMU hanging at 100% CPU while running the test, without tracing the cause to a specific instruction or system call.

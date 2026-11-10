@@ -1,0 +1,2 @@
+runtime
+The crash occurs in QEMU’s gdbstub when SIGPROF is passed to GDB, rather than being traced to an instruction or system call.

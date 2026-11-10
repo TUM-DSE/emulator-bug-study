@@ -1,0 +1,2 @@
+mistranslation
+The report traces the crash to a commit adding FPSCR.PR checks for SH4 instructions, and reverting it fixes the failure.

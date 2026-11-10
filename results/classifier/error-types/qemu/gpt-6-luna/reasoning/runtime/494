@@ -1,0 +1,2 @@
+runtime
+The report only says that CMake crashes with an illegal-instruction error and does not trace the failure to a specific guest instruction.

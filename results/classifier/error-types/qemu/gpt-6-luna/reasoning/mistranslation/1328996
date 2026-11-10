@@ -1,0 +1,2 @@
+mistranslation
+The report says `blr x30` behaves incorrectly under emulation, while the same program prints the expected output on real hardware.

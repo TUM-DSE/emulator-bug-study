@@ -1,0 +1,2 @@
+runtime
+The report shows Python’s `time.time()` failing under QEMU but does not identify an incorrectly emulated instruction or system call.

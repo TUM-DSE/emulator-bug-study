@@ -1,0 +1,2 @@
+mistranslation
+The report traces the failure to `tcg_gen_mulu2_i32` recursively calling itself through `tcg_gen_mul_i64` during instruction translation.

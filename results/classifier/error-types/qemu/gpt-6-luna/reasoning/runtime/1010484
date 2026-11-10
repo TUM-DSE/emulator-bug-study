@@ -1,0 +1,2 @@
+runtime
+The report concerns slirp rejecting a configured DNS server outside the local subnet, not instruction translation or a system call.

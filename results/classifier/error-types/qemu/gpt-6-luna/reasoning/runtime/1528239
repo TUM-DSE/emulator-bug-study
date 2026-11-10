@@ -1,0 +1,2 @@
+runtime
+The report describes the gdb stub failing to access the PIE binary’s relocated breakpoint address, not an incorrect guest instruction or system call.

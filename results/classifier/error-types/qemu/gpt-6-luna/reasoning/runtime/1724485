@@ -1,0 +1,2 @@
+runtime
+The assertion fails in QEMU’s instruction-disassembly logging path (`-d in_asm`), and the report does not establish an incorrect guest instruction translation or system call.

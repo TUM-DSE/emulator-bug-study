@@ -1,0 +1,2 @@
+runtime
+The report identifies a hang during thread termination or `pthread_join`, but does not trace it to an incorrectly emulated instruction or system call.

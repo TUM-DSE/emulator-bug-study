@@ -1,0 +1,2 @@
+runtime
+The report concerns QEMU’s handling of `binfmt_misc`’s `P` flag and the resulting argument parsing, not guest instruction translation or a system call.

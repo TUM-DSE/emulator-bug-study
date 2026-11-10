@@ -1,0 +1,2 @@
+mistranslation
+The report traces the missing second-register store to QEMU’s `trans_STGP()` instruction translation.

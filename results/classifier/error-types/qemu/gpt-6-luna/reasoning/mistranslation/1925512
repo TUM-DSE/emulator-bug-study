@@ -1,0 +1,2 @@
+mistranslation
+The report says QEMU’s BLX immediate translation fails to treat the H==1 encoding as undefined, contrary to the ARM instruction specification.

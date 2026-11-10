@@ -1,0 +1,2 @@
+mistranslation
+The report shows BEXTR produces a different destination value because QEMU appears not to apply the instruction’s operand-size limit.

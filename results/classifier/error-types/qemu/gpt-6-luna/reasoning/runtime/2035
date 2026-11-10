@@ -1,0 +1,2 @@
+runtime
+The issue concerns QEMU’s plugin exit-callback lifecycle: it runs when the guest is interrupted, but not when the test program exits normally.

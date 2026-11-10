@@ -1,0 +1,2 @@
+runtime
+The report describes excessive gdbstub XML generation for each vCPU, causing memory growth as threads are created.

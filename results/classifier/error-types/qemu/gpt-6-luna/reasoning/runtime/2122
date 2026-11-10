@@ -1,0 +1,2 @@
+runtime
+The report only says QEMU segfaults while running `ldconfig`; it does not trace the failure to a particular instruction or system call.

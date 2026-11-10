@@ -1,0 +1,2 @@
+mistranslation
+The report suggests `feq.s` may incorrectly consider bits above the lowest 32 bits when comparing operands.

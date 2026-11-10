@@ -1,0 +1,2 @@
+runtime
+The report identifies incorrect stack alignment when QEMU enters a signal handler, not an instruction translation or system-call error.

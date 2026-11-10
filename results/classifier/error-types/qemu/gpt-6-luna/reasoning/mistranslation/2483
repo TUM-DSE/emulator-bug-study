@@ -1,0 +1,2 @@
+mistranslation
+The report says the m68k `jsr (SP)` emulation puts the return address at the wrong location and sets the PC incorrectly.

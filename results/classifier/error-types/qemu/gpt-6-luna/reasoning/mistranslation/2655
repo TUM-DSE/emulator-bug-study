@@ -1,0 +1,2 @@
+mistranslation
+The report traces the incorrect vector load behavior to `vext_ldff()` treating `TLB_MMIO` from `probe_access_flags()` as a fault and truncating the load after the first element.

@@ -1,0 +1,2 @@
+runtime
+The crash occurs while QEMU constructs a guest signal frame, and the report attributes the fix to sigprocmask wrapper patches rather than instruction translation or syscall emulation.

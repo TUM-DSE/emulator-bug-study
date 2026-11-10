@@ -1,0 +1,2 @@
+runtime
+The report attributes the failure to QEMU’s gdbserver ignoring remote Ctrl-C interrupts, not to a guest instruction or system call.

@@ -1,0 +1,2 @@
+runtime
+The report describes Java crashing with random SIGSEGVs but does not trace the cause to a specific instruction or system call.

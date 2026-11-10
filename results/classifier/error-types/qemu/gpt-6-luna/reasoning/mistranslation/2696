@@ -1,0 +1,2 @@
+mistranslation
+The invalid guest instruction triggers an unreachable assertion in `decode_insns()` instead of being handled as an invalid instruction.

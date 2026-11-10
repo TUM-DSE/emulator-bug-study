@@ -1,0 +1,2 @@
+mistranslation
+The report says QEMU’s ARM linux-user mode fails to convert the guest `BKPT` instruction into `SIGTRAP`.

@@ -1,0 +1,2 @@
+syscall
+The report says MIPS syscall 436 returns ENOSYS because the syscall number is rejected by the syscall dispatch bounds check.

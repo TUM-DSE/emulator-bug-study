@@ -1,0 +1,2 @@
+runtime
+The report describes a hang caused by guest address-space limit handling, not an incorrect instruction or system call.

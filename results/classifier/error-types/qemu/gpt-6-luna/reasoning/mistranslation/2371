@@ -1,0 +1,2 @@
+mistranslation
+The report traces the incorrect result to `helper_froundnx_h` using `check_nanbox_s` instead of `check_nanbox_h` when emulating the guest instruction.

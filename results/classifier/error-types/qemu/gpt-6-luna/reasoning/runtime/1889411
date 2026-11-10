@@ -1,0 +1,2 @@
+runtime
+The failure occurs during GDB stack unwinding after signal delivery; the report does not trace it to an incorrectly emulated instruction or system call.

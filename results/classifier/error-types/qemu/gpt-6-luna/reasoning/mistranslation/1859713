@@ -1,0 +1,2 @@
+mistranslation
+The report identifies incorrect emulation of the `autiasp` pointer-authentication instruction, which accepts a corrupted LR instead of producing an invalid pointer.

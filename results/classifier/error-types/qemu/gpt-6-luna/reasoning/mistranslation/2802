@@ -1,0 +1,2 @@
+mistranslation
+The `fdtox` and `fqtox` instructions select the wrong destination register, producing 0 instead of the expected 60.

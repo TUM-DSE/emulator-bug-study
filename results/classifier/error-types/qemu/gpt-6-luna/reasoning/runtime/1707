@@ -1,0 +1,2 @@
+runtime
+The report shows the guest binary produces no output, but does not trace the failure to an incorrectly emulated instruction or system call.

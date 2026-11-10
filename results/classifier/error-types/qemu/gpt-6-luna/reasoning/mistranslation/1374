@@ -1,0 +1,2 @@
+mistranslation
+BZHI produces a different destination value and SF flag in QEMU than on the CPU.

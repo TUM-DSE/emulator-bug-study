@@ -1,0 +1,2 @@
+runtime
+The report attributes the crash to QEMU’s fixed guest stack size and its failure to honor `RLIMIT_STACK`, not to a specific instruction or syscall.

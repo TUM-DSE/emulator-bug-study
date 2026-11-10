@@ -1,0 +1,2 @@
+runtime
+The report identifies incomplete signal handling, including incorrect target signal-stack layout and failure to invoke handlers, without tracing it to an instruction or specific system call.

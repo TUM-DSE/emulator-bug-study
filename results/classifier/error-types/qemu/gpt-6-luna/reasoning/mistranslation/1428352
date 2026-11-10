@@ -1,0 +1,2 @@
+mistranslation
+The report identifies `helper_sysret()` loading `%ss` without the privilege-level bits required by the SYSRET instruction.

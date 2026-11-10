@@ -1,0 +1,2 @@
+mistranslation
+QEMU executes the v8-only `vrintz` instruction on a Cortex-A9 instead of rejecting it as unsupported.

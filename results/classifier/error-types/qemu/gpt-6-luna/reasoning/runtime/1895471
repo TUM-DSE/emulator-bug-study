@@ -1,0 +1,2 @@
+runtime
+The report describes a QEMU build failure caused by Clang rejecting C11 atomic operations in `util/async.c`, not an error in guest instruction emulation or a system call.

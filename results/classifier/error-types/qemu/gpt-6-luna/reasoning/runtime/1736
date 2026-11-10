@@ -1,0 +1,2 @@
+runtime
+The report identifies an incorrect guest address in QEMU’s debug output, not incorrect instruction execution or system-call behavior.

@@ -1,0 +1,2 @@
+mistranslation
+The AVX-encoded `vsubsd` instruction reaches QEMU’s translated execution and hangs inside its floating-point emulation helper.

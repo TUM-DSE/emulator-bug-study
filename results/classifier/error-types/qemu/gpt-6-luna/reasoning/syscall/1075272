@@ -1,0 +1,2 @@
+syscall
+The report identifies incorrect translation of the `socket` system call’s type and flag arguments for MIPS guests.

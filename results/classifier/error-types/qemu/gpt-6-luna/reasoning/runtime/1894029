@@ -1,0 +1,2 @@
+runtime
+The reported allocation spacing comes from the program’s `printf` format (`%x` is mismatched with pointer arguments), not from a demonstrated instruction or system-call emulation error.

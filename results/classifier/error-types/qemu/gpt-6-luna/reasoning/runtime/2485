@@ -1,0 +1,2 @@
+runtime
+The program hangs inside musl’s `getifaddrs`; the report does not trace the cause to an incorrectly emulated instruction or system call.

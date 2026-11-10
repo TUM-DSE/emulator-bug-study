@@ -1,0 +1,2 @@
+runtime
+The report shows `file(1)` failing with an invalid argument under qemu-sh4-user, but does not trace the failure to a specific guest instruction or system call.

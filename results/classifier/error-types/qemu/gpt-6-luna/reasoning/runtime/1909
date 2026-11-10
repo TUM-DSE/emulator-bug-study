@@ -1,0 +1,2 @@
+runtime
+The program segfaults on a valid store to a gcov counter, but the report does not establish that QEMU mistranslates the store instruction or mishandles a system call.

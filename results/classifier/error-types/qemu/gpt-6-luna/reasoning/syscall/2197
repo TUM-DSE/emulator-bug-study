@@ -1,0 +1,2 @@
+syscall
+The report identifies incorrect handling of `setsockopt()` with `optlen=0`, returning `ENOMEM` instead of success.

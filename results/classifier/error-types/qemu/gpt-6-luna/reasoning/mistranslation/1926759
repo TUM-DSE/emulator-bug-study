@@ -1,0 +1,2 @@
+mistranslation
+The report identifies the WFI instruction as triggering an unhandled CPU exception, contrary to its expected behavior.

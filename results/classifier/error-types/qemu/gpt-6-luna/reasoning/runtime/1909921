@@ -1,0 +1,2 @@
+runtime
+The report shows QEMU receiving a signal outside the vCPU context, but does not trace the failure to a specific guest instruction or system call.

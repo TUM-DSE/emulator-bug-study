@@ -1,0 +1,2 @@
+mistranslation
+The report traces the behavioral difference to instruction emulation: `cbo.zero` takes a fast `memset` path in linux-user mode and consequently skips memory callbacks.

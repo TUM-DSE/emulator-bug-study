@@ -1,0 +1,2 @@
+mistranslation
+The report shows QEMU computes the BLSI instruction’s CF flag differently from real hardware.

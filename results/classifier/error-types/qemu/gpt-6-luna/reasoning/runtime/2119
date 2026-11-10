@@ -1,0 +1,2 @@
+runtime
+The report describes a GDB stub limitation: vector registers are accessible only when the single-letter V feature is enabled.

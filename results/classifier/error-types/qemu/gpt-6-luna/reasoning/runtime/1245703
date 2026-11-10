@@ -1,0 +1,2 @@
+runtime
+The report describes QEMU recursively following procfs symlinks while scanning the sysroot and exhausting memory, not an instruction or system call emulation error.

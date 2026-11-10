@@ -1,0 +1,2 @@
+runtime
+The report describes Chrome failing to run in a schroot environment, without tracing the cause to a guest instruction or system call.

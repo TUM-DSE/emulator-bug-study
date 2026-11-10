@@ -1,0 +1,2 @@
+runtime
+The report shows Go’s runtime failing during initialization, without tracing the failure to an incorrectly emulated instruction or system call.

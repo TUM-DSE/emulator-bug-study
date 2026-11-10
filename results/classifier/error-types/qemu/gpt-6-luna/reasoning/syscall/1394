@@ -1,0 +1,2 @@
+syscall
+The `getresuid` result values are written with their 16-bit halves reversed, indicating incorrect syscall emulation or output conversion.

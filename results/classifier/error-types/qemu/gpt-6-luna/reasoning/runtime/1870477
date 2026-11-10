@@ -1,0 +1,2 @@
+runtime
+The report describes QEMU hanging while running the Go program but does not trace the hang to an incorrectly emulated instruction or system call.

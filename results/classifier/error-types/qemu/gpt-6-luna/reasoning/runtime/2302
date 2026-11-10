@@ -1,0 +1,2 @@
+runtime
+The report shows SIGILL after a byte in the instruction stream but does not establish that QEMU mistranslated a specific instruction.

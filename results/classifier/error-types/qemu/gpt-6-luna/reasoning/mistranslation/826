@@ -1,0 +1,2 @@
+mistranslation
+The report traces the invalid load address to QEMU’s handling of `LDNT1SB` as `LD1SB`, which calculates the vector-plus-scalar addressing mode incorrectly.

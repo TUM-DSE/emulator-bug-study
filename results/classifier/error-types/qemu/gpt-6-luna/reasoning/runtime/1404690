@@ -1,0 +1,2 @@
+runtime
+The report shows QEMU aborting with an illegal-instruction error but does not trace it to an incorrectly translated guest instruction.

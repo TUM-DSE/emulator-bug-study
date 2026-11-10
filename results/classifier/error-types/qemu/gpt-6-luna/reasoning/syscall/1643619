@@ -1,0 +1,2 @@
+syscall
+The netlink request is passed to the kernel with its length and type byte-swapped on big-endian MIPS, indicating incorrect syscall/socket argument translation.

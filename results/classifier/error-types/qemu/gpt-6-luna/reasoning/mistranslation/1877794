@@ -1,0 +1,2 @@
+mistranslation
+Constant folding of subtraction leads QEMU’s optimizer to generate an invalid shift instruction, causing a host SIGILL.

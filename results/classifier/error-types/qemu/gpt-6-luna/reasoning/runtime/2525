@@ -1,0 +1,2 @@
+runtime
+The report identifies an assertion failure in QEMU’s user-execution memory-management code, not an instruction or system-call emulation error.

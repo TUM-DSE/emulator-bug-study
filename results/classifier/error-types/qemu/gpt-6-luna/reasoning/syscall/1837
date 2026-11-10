@@ -1,0 +1,2 @@
+syscall
+The report identifies `setsockopt` with `IP_MULTICAST_IF` as unsupported, returning “Protocol not available” under QEMU.

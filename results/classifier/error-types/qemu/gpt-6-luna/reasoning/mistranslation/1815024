@@ -1,0 +1,2 @@
+mistranslation
+The report traces SIGILL to QEMU’s handling of the guest `stck` instruction, which works in system mode but fails in user mode.

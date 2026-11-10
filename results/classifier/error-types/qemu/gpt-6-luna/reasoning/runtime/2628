@@ -1,0 +1,2 @@
+runtime
+The report describes guest programs crashing under QEMU on some machines but does not trace the failures to a specific instruction or system call.

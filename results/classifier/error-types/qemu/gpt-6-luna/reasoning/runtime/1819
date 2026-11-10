@@ -1,0 +1,2 @@
+runtime
+The report describes `rpm -qa` crashing under ARM-on-AMD64 container emulation but does not trace the crash to a specific instruction or system call.

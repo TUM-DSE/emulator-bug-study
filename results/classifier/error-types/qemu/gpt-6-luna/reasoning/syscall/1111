@@ -1,0 +1,2 @@
+syscall
+The report attributes the `ENOSYS` error to the guest’s `FUTEX_LOCK_PI` system call.

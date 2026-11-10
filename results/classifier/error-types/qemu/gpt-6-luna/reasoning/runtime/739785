@@ -1,0 +1,2 @@
+runtime
+The report describes `fork()` failing with `Invalid argument` while running Bash, but does not trace the failure to a specific emulated instruction or system call.

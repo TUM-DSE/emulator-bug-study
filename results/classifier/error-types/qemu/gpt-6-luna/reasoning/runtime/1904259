@@ -1,0 +1,2 @@
+runtime
+The report describes QEMU failing to compile because Clang treats atomic-alignment warnings as errors, not incorrect guest instruction or syscall behavior.

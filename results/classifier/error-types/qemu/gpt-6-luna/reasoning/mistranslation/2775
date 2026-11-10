@@ -1,0 +1,2 @@
+mistranslation
+The crash occurs in `sparc_tr_insn_start` while translating guest SPARC instructions, indicating a failure in the instruction translator.

@@ -1,0 +1,2 @@
+mistranslation
+The report identifies incorrect overflow-flag behavior when QEMU emulates the ADOX instruction, and reports the same issue for ADCX’s carry flag.

@@ -1,0 +1,2 @@
+runtime
+The `-d` option reports incorrect guest memory section addresses because of a change in memory-region walking, not because of guest instruction or system-call emulation.

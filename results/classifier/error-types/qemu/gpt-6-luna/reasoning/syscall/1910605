@@ -1,0 +1,2 @@
+syscall
+The failure occurs on the `USBDEVFS_BULK` ioctl, which points to incorrect ioctl argument handling rather than instruction translation.

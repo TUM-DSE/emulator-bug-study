@@ -1,0 +1,2 @@
+syscall
+The report attributes `EINVAL` to QEMU’s handling of the MIPS `clone` syscall flags, which rejects the specified flag combination.

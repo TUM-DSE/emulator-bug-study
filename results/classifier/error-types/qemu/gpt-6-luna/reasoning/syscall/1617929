@@ -1,0 +1,2 @@
+syscall
+The hang occurs while QEMU is blocked in `safe_pselect6` handling the guest’s `_newselect` system call.

@@ -1,0 +1,2 @@
+syscall
+The report identifies incorrect sysroot path translation in `openat()`, causing it to use a directory file descriptor under the sysroot rather than the expected `/tmp` path.

@@ -1,0 +1,2 @@
+syscall
+The report identifies incorrect handling of the `AT_EXECFD` auxiliary-vector value, causing QEMU to leave the executable descriptor open as stdin.

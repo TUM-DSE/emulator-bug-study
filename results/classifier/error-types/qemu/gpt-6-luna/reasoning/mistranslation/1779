@@ -1,0 +1,2 @@
+mistranslation
+The report says AltiVec `vec_add` flushes result subnormals but fails to flush subnormal source operands as specified.

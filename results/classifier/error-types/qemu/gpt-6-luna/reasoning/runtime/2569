@@ -1,0 +1,2 @@
+runtime
+The report describes missing plugin register tracking because the Alpha target lacks register XML, not incorrect guest instruction or system-call behavior.

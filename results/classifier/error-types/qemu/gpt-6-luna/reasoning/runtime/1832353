@@ -1,0 +1,2 @@
+runtime
+The report describes QEMU repeatedly asserting in `cpu_exec` while running the test, without tracing the failure to a specific guest instruction or system call.

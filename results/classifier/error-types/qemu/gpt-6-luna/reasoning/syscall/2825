@@ -1,0 +1,2 @@
+syscall
+The failure is specific to `execveat` with `AT_EMPTY_PATH` returning `ENOENT` for guest architectures, while the `/proc/self/fd` path succeeds.

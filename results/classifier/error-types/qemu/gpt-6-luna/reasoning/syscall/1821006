@@ -1,0 +1,2 @@
+syscall
+The report identifies QEMU rejecting syscall 382 while building the ARM image.

@@ -1,0 +1,2 @@
+runtime
+The report identifies an incorrect `AT_PLATFORM` value in the guest auxiliary vector, not an instruction or system-call emulation error.

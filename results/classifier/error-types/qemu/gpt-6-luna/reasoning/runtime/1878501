@@ -1,0 +1,2 @@
+runtime
+The report attributes the crash to QEMU not providing the `AT_SYSINFO` auxiliary-vector entry, rather than to incorrect instruction emulation or a system call.

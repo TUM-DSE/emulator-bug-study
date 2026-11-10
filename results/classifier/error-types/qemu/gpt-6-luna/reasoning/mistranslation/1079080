@@ -1,0 +1,2 @@
+mistranslation
+The report says the `srs` instruction stores CPSR instead of SPSR, which is incorrect instruction behavior.

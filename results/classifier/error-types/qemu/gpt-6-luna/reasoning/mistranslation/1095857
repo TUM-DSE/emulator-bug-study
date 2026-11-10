@@ -1,0 +1,2 @@
+mistranslation
+The report says a long-mode instruction using `[r15d]` is translated as `[r15]`, incorrectly using the register’s high 32 bits and causing a fault.

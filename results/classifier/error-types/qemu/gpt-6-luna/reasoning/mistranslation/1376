@@ -1,0 +1,2 @@
+mistranslation
+The report attributes the crash to QEMU’s emulation of the guest LSL and LAR instructions, which should clear ZF without loading a value for an invalid descriptor.

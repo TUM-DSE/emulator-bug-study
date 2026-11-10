@@ -1,0 +1,2 @@
+runtime
+The report describes incorrect debugger breakpoint placement when symbols are provided, not an instruction or system-call emulation error.

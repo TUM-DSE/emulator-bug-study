@@ -1,0 +1,2 @@
+mistranslation
+The slowdown is specifically triggered by enabling FEAT_LSE2 for `-cpu max` and disappears when that feature is disabled or the enabling commit is reverted.

@@ -1,0 +1,2 @@
+runtime
+The report attributes the recursion to signal handling in `process_pending_signals`, where already-queued signals are not blocked on handler entry.

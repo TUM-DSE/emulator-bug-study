@@ -1,0 +1,2 @@
+runtime
+The report describes incorrect trace-event generation and logging, not guest instruction translation or system-call emulation.

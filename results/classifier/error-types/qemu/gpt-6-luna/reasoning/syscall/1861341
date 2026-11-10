@@ -1,0 +1,2 @@
+syscall
+The report identifies syscall 397 (statx) as unknown when an ARM guest program runs, indicating a missing syscall emulation.

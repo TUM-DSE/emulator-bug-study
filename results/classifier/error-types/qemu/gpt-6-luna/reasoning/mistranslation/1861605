@@ -1,0 +1,2 @@
+mistranslation
+The report traces the failure to LL/SC instruction emulation, where an incorrect sign extension makes the CMPXCHG comparison fail.

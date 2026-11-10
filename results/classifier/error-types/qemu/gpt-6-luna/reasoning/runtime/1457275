@@ -1,0 +1,2 @@
+runtime
+The trace shows QEMU looping while reserving and unmapping guest address space, rather than an instruction translation or guest system-call failure.

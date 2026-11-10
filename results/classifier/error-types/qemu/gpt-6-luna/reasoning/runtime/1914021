@@ -1,0 +1,2 @@
+runtime
+The report only notes an illegal-instruction signal and different behavior under GDB; it does not trace the failure to a specific guest instruction.

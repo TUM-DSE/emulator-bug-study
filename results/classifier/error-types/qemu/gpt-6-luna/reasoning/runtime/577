@@ -1,0 +1,2 @@
+runtime
+The report shows `getdtablesize()` returning an unusable value under QEMU but does not trace the cause to a particular instruction or system call.

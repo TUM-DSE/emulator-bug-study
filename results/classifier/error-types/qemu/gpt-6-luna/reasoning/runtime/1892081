@@ -1,0 +1,2 @@
+runtime
+The report describes a performance improvement from `QEMU_FLATTEN` in a softfloat conversion function, not incorrect instruction or system-call behavior.

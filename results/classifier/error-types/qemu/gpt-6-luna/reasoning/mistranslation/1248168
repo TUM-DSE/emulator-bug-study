@@ -1,0 +1,2 @@
+mistranslation
+The report attributes the unexpected self-modifying-code behavior to execution of MIPS instructions from uncached, unmapped memory, rather than to a system call or other runtime behavior.

@@ -1,0 +1,2 @@
+mistranslation
+The report says `pmovzxbw` zero-extends only the first element instead of all eight, producing incorrect instruction results.

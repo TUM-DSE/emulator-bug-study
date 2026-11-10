@@ -1,0 +1,2 @@
+syscall
+The report attributes the failure to the guest `lseek` system call returning `-EFAULT` for a valid file descriptor.

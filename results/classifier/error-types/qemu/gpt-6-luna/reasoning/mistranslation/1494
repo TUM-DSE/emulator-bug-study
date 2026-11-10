@@ -1,0 +1,2 @@
+mistranslation
+The SIGILL and Go compiler faults occur in QEMU-generated guest code, indicating incorrect x86_64 instruction emulation rather than a syscall failure.

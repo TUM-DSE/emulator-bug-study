@@ -1,0 +1,2 @@
+runtime
+The hang occurs during fork when `fd_trans_lock` is held, rather than being attributed to an incorrectly emulated instruction or system call.

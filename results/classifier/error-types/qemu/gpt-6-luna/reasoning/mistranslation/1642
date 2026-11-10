@@ -1,0 +1,2 @@
+mistranslation
+The crash is traced to emulation of the guest STXP instruction, which invokes the atomic compare-exchange helper with its 128-bit arguments.

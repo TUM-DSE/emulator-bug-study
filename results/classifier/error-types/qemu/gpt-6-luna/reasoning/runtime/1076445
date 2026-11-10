@@ -1,0 +1,2 @@
+runtime
+`system()` returns `-1` under qemu-i386 and qemu-x86_64, but the report does not identify an instruction or system-call emulation error as the cause.

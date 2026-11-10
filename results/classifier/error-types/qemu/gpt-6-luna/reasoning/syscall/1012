@@ -1,0 +1,2 @@
+syscall
+The report attributes the failure to `newfstatat` with `AT_EMPTY_PATH` returning `ENOENT` for a deleted here-document file, unlike `fstat`.

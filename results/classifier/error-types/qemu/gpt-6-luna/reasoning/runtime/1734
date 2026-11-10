@@ -1,0 +1,2 @@
+runtime
+The report attributes the mmap failures to exhaustion of the guest address space below the ELF load address, not to incorrect instruction or syscall emulation.

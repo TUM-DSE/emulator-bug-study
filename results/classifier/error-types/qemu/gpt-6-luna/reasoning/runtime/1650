@@ -1,0 +1,2 @@
+runtime
+The failure is attributed to QEMU’s build-time handling of `MAP_FIXED_NOREPLACE` and runtime feature detection, not to guest instruction translation or a specific guest system call.

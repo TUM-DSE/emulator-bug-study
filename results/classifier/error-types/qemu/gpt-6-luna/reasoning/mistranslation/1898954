@@ -1,0 +1,2 @@
+mistranslation
+The report traces the hang to executing the x86 `F1` opcode, which should raise the guest’s debug exception.

@@ -1,0 +1,2 @@
+runtime
+The report describes QEMU user-mode crashing with a segmentation fault when running a program built with `-fsanitize=function`, without tracing the failure to a specific guest instruction or system call.

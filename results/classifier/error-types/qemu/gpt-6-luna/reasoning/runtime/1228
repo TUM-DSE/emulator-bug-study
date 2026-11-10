@@ -1,0 +1,2 @@
+runtime
+The report describes timing-sensitive escape-key handling in QEMU’s curses display, not incorrect guest instruction or system-call emulation.

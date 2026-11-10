@@ -1,0 +1,2 @@
+runtime
+The report only shows QEMU itself crashing with a host-side segmentation fault and does not tie it to a guest instruction or system call.
