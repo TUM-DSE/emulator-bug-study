@@ -3,6 +3,7 @@ from __future__ import annotations
 from argparse import ArgumentParser
 from datetime import timedelta
 from os import makedirs, path
+import sys
 from time import monotonic
 from typing import Any
 
@@ -105,6 +106,9 @@ def main() -> None:
     parser.add_argument('--model', type=str, help="Model name (default depends on backend)")
     parser.add_argument('--preamble', type=str, help="Path to preamble/prompt file (required for ollama)")
     parser.add_argument('--compare', nargs='?', const="MoritzLaurer/deberta-v3-large-zeroshot-v2.0", type=str, help="Second model for cross-validation (zero-shot only)")
+    parser.add_argument('--pi-binary', default='pi', help="pi executable to run (pi backend only, default: pi)")
+    parser.add_argument('--thinking', default='off', choices=['off', 'minimal', 'low', 'medium', 'high', 'xhigh', 'max'], help="Thinking level (pi backend only, default: off)")
+    parser.add_argument('--timeout', type=float, default=600, help="Seconds to wait for each pi response before restarting pi (pi backend only, default: 600)")
     parser.add_argument('-m', '--multi-label', action='store_true', help="Enable multi-label classification (zero-shot only)")
 
     parser.add_argument('--config', type=str, help="Path to TOML category config file (overrides --positive/--negative/--architectures)")
@@ -127,7 +131,7 @@ def main() -> None:
 
     start_time = monotonic()
 
-    from bug_classifier.backend import ClassifierBackend
+    from bug_classifier.backend import ClassificationError, ClassifierBackend
     backend: ClassifierBackend
 
     if args.backend == 'zero-shot':
@@ -157,7 +161,6 @@ def main() -> None:
 
     elif args.backend == 'anthropic':
         import os
-        import sys
         if not os.environ.get("ANTHROPIC_API_KEY"):
             sys.exit(
                 "error: --backend anthropic requires the ANTHROPIC_API_KEY "
@@ -174,10 +177,9 @@ def main() -> None:
 
     elif args.backend == 'pi':
         import shutil
-        import sys
-        if shutil.which("pi") is None:
+        if shutil.which(args.pi_binary) is None:
             sys.exit(
-                "error: --backend pi requires the `pi` coding agent to be installed.\n"
+                f"error: --backend pi requires the `{args.pi_binary}` coding agent to be installed.\n"
                 "Run the classifier via `nix run .#bug-classifier-full` or enter "
                 "`nix develop .#full` and re-run."
             )
@@ -187,8 +189,9 @@ def main() -> None:
         model = args.model or "claude-haiku-4-5"
         with open(args.preamble, "r") as file:
             preamble = file.read()
-        backend = PiBackend(model=model, preamble=preamble)
-        print(f"The model {model} will be used via pi")
+        backend = PiBackend(model=model, preamble=preamble, binary=args.pi_binary,
+                            thinking=args.thinking, timeout=args.timeout)
+        print(f"The model {model} will be used via {args.pi_binary} with thinking {args.thinking}")
 
     else:
         raise ValueError(f"Unknown backend: {args.backend}")
@@ -200,6 +203,7 @@ def main() -> None:
         bugs = bugs + list_files_recursive(input_dir)
 
     print(f"{len(bugs)} number of bugs will be processed")
+    failures = consecutive = 0
     for i, bug in enumerate(bugs):
         print(f"Bug: {bug}, Number: {i+1},", end=" ")
 
@@ -210,12 +214,25 @@ def main() -> None:
         with open(bug, "r") as file:
             text = file.read()
 
-        result = backend.classify(text, categories)
+        try:
+            result = backend.classify(text, categories)
+        except ClassificationError as error:
+            # Write nothing, so that resuming the run classifies this bug again.
+            print(f"failed: {error}")
+            failures += 1
+            consecutive += 1
+            if consecutive == 3:
+                break
+            continue
+        consecutive = 0
         write_output(text, result.category, result.labels, result.scores,
                      path.basename(bug), args.output_dir, start_time, result.reasoning)
 
     end_time = monotonic()
     print(timedelta(seconds=end_time - start_time))
+    if failures:
+        stopped = " (stopped after 3 consecutive failures)" if consecutive == 3 else ""
+        sys.exit(f"error: {failures} bugs failed{stopped}; rerun to retry them")
 
 
 if __name__ == "__main__":

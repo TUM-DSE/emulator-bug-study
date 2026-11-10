@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import queue
 import subprocess
+import threading
+import time
 from dataclasses import dataclass
 from re import compile as re_compile, sub, DOTALL
 from typing import IO
@@ -132,103 +135,188 @@ class AnthropicBackend(ClassifierBackend):
         )
 
 
+class ClassificationError(RuntimeError):
+    """A backend failed to produce a model response; nothing should be recorded."""
+
+
 class PiBackend(ClassifierBackend):
-    """Classification via pi coding agent in RPC mode."""
+    """Classification via pi coding agent in RPC mode.
+
+    Pi runs with a private agent directory that only links the user's
+    auth.json, so their AGENTS.md, APPEND_SYSTEM.md, settings and extensions
+    never reach the classifier prompt.
+    """
 
     _stdin: IO[str]
-    _stdout: IO[str]
+    _lines: queue.Queue[str | None]
 
-    def __init__(self, model: str, preamble: str) -> None:
+    def __init__(self, model: str, preamble: str, binary: str = "pi", thinking: str = "off",
+                 attempts: int = 4, retry_delay: float = 60.0, timeout: float = 600.0) -> None:
+        import os
         import shutil
+        import tempfile
+        from pathlib import Path
 
-        pi_bin = shutil.which("pi")
+        pi_bin = shutil.which(binary)
         if pi_bin is None:
             raise RuntimeError(
-                "pi binary not found on PATH. "
+                f"pi binary not found on PATH: {binary}. "
                 "Run via `nix run .#bug-classifier-full` or enter `nix develop .#full`."
             )
 
+        self._home = tempfile.TemporaryDirectory(prefix="bug-classifier-pi-")
+        source = Path(os.environ.get("PI_CODING_AGENT_DIR") or "~/.pi/agent").expanduser()
+        auth = source / "auth.json"
+        if auth.exists():
+            # A link rather than a copy, so refreshed OAuth tokens reach the real file.
+            os.symlink(auth.absolute(), Path(self._home.name) / "auth.json")
+        self._env = {**os.environ, "PI_CODING_AGENT_DIR": self._home.name}
+        self._command = [
+            pi_bin,
+            "--mode", "rpc",
+            "--no-session",
+            "--no-tools",
+            "--no-extensions",
+            "--no-skills",
+            "--no-context-files",
+            "--thinking", thinking,
+            "--model", model,
+            "--system-prompt", preamble,
+        ]
+        self.attempts = attempts
+        self.retry_delay = retry_delay
+        self.timeout = timeout
+        self._start()
+
+    def _start(self) -> None:
+        # Run outside the repository so no project .pi/ configuration is picked up.
         self.proc = subprocess.Popen(
-            [
-                pi_bin,
-                "--mode", "rpc",
-                "--no-session",
-                "--no-tools",
-                "--no-extensions",
-                "--no-skills",
-                "--thinking", "off",
-                "--model", model,
-                "--system-prompt", preamble,
-            ],
+            self._command,
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             text=True,
+            cwd=self._home.name,
+            env=self._env,
         )
         assert self.proc.stdin is not None
         assert self.proc.stdout is not None
         self._stdin = self.proc.stdin
-        self._stdout = self.proc.stdout
+        # Read on a thread so that waiting for pi can time out; None marks EOF.
+        lines: queue.Queue[str | None] = queue.Queue()
 
-    def classify(self, text: str, categories: list[str], **kwargs: object) -> ClassificationResult:
+        def read(stdout: IO[str] = self.proc.stdout) -> None:
+            for line in stdout:
+                lines.put(line)
+            lines.put(None)
+
+        threading.Thread(target=read, daemon=True).start()
+        self._lines = lines
+
+    def _send(self, command: dict[str, object]) -> None:
         import json
 
-        # Send the prompt
-        self._stdin.write(json.dumps({"type": "prompt", "message": text}) + "\n")
-        self._stdin.flush()
+        try:
+            self._stdin.write(json.dumps(command) + "\n")
+            self._stdin.flush()
+        except OSError:
+            raise ClassificationError("pi exited unexpectedly") from None
 
-        # Read until agent_end event
-        raw = ""
-        for line in self._stdout:
-            line = line.rstrip("\n")
+    def _events(self, deadline: float):
+        import json
+
+        while True:
             try:
-                event = json.loads(line)
+                line = self._lines.get(timeout=max(deadline - time.monotonic(), 0))
+            except queue.Empty:
+                # A hung pi is killed; the retry starts a fresh process.
+                self.proc.kill()
+                self.proc.wait(timeout=5)
+                raise ClassificationError(f"pi did not finish within {self.timeout:g}s") from None
+            if line is None:
+                raise ClassificationError("pi exited unexpectedly")
+            try:
+                event = json.loads(line.rstrip("\n"))
             except json.JSONDecodeError:
                 continue
+            if isinstance(event, dict):
+                yield event
+
+    def _wait_response(self, command: str, deadline: float) -> None:
+        for event in self._events(deadline):
+            if event.get("type") == "response" and event.get("command") in (command, "parse"):
+                if event.get("success") is False:
+                    raise ClassificationError(f"pi rejected {command}: {event.get('error')}")
+                return
+
+    def _prompt(self, text: str) -> str:
+        # Start every attempt from an empty session, even after a failed one.
+        deadline = time.monotonic() + self.timeout
+        self._send({"type": "new_session"})
+        self._wait_response("new_session", deadline)
+        self._send({"type": "prompt", "message": text})
+        self._wait_response("prompt", deadline)
+
+        # agent_end can be followed by pi's own retries; only agent_settled is final.
+        last: dict[str, object] | None = None
+        for event in self._events(deadline):
             if event.get("type") == "agent_end":
-                # Extract the last assistant text content
-                for msg in reversed(event.get("messages", [])):
-                    if msg.get("role") == "assistant":
-                        for block in reversed(msg.get("content", [])):
-                            if isinstance(block, dict) and block.get("type") == "text":
-                                raw = block["text"]
-                                break
-                            elif isinstance(block, str):
-                                raw = block
-                                break
-                        if raw:
-                            break
+                for msg in reversed(event.get("messages") or []):
+                    if isinstance(msg, dict) and msg.get("role") == "assistant":
+                        last = msg
+                        break
+            elif event.get("type") == "agent_settled":
+                if event.get("aborted"):
+                    raise ClassificationError("pi aborted the run")
                 break
 
-        # Parse category
-        category = parse_category(raw, categories)
+        if last is None:
+            raise ClassificationError("pi returned no assistant message")
+        if last.get("stopReason", "stop") != "stop":
+            raise ClassificationError(
+                f"pi stopped with {last.get('stopReason')}: {last.get('errorMessage', 'no details')}")
+        content = last.get("content")
+        for block in reversed(content if isinstance(content, list) else []):
+            if isinstance(block, dict) and block.get("type") == "text":
+                return block["text"]
+            if isinstance(block, str):
+                return block
+        raise ClassificationError("pi returned no text")
 
-        # Reset session context for the next bug
-        self._stdin.write(json.dumps({"type": "new_session"}) + "\n")
-        self._stdin.flush()
+    def classify(self, text: str, categories: list[str], **kwargs: object) -> ClassificationResult:
+        import sys
 
-        # Drain until new_session response
-        for line in self._stdout:
-            line = line.rstrip("\n")
+        attempt = 1
+        while True:
             try:
-                event = json.loads(line)
-            except json.JSONDecodeError:
+                raw = self._prompt(text)
+            except ClassificationError as error:
+                if attempt >= self.attempts:
+                    raise
+                delay = self.retry_delay * 2 ** (attempt - 1)
+                attempt += 1
+                print(f"pi: {error}; retry {attempt}/{self.attempts} in {delay:.0f}s",
+                      file=sys.stderr)
+                if self.proc.poll() is not None:
+                    self._start()
+                time.sleep(delay)
                 continue
-            if event.get("type") == "response" and event.get("command") == "new_session":
-                break
+            break
 
         return ClassificationResult(
-            category=category,
+            category=parse_category(raw, categories),
             labels=[],
             scores=[],
             reasoning=raw,
         )
 
     def close(self) -> None:
-        """Terminate the pi subprocess."""
+        """Terminate the pi subprocess and remove its agent directory."""
         if hasattr(self, 'proc') and self.proc.poll() is None:
             self._stdin.close()
             self.proc.terminate()
             self.proc.wait(timeout=5)
+        if hasattr(self, '_home'):
+            self._home.cleanup()
 
     def __del__(self) -> None:
         self.close()

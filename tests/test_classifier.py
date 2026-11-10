@@ -2,7 +2,10 @@ import pytest
 import os
 import tempfile
 from bug_classifier.main import get_category, compare_category, write_output
+from pathlib import Path
 from time import monotonic
+from typing import Any
+from unittest.mock import patch
 
 
 POSITIVE = ['semantic', 'TCG', 'assembly', 'architecture', 'mistranslation', 'register', 'user-level']
@@ -103,3 +106,51 @@ class TestWriteOutput:
             reasoning_path = os.path.join(os.path.dirname(tmpdir), "reasoning", "network", "bug123")
             assert os.path.exists(reasoning_path)
             assert "because reasons" in open(reasoning_path).read()
+
+
+class TestMainFailures:
+    def _run_main(self, tmp_path: Path, outcomes: list[str | None]) -> tuple[str, list[str]]:
+        from bug_classifier.backend import ClassificationError, ClassificationResult
+
+        bugs = tmp_path / "bugs"
+        bugs.mkdir()
+        for i in range(len(outcomes)):
+            (bugs / f"bug{i}").write_text(f"bug {i}")
+        preamble = tmp_path / "preamble.txt"
+        preamble.write_text("classify")
+        output = tmp_path / "output"
+
+
+        class FakeBackend:
+            def __init__(self, **kwargs: Any) -> None:
+                pass
+
+            def classify(self, text: str, categories: list[str], **kwargs: Any) -> ClassificationResult:
+                outcome = outcomes[int(text.split()[1])]
+                if outcome is None:
+                    raise ClassificationError("usage limit")
+                return ClassificationResult(category=outcome, labels=[], scores=[])
+
+        argv = ["bug-classifier", "--backend", "ollama", "--preamble", str(preamble),
+                "-i", str(bugs), "-o", str(output), "--positive", "boot", "--negative", "other",
+                "--architectures", "x86"]
+        from bug_classifier import main as main_module
+        listing = main_module.list_files_recursive
+        with patch("sys.argv", argv), patch("bug_classifier.backend.OllamaBackend", FakeBackend), \
+             patch.object(main_module, "list_files_recursive",
+                          lambda *a: sorted(listing(*a))):
+            from bug_classifier.main import main
+            with pytest.raises(SystemExit) as exit_info:
+                main()
+        written = sorted(p.name for p in output.rglob("*") if p.is_file()) if output.exists() else []
+        return str(exit_info.value.code), written
+
+    def test_failed_bug_is_not_written(self, tmp_path: Path):
+        code, written = self._run_main(tmp_path, ["boot", None, "other"])
+        assert "1 bugs failed" in code
+        assert written == ["bug0", "bug2"]
+
+    def test_stops_after_three_consecutive_failures(self, tmp_path: Path):
+        code, written = self._run_main(tmp_path, ["boot", None, None, None, "other"])
+        assert "stopped after 3 consecutive failures" in code
+        assert written == ["bug0"]
