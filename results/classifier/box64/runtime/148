@@ -1,0 +1,3 @@
+
+Force emulation of all libraries?
+Is there a way to force box64 to emulate all libraries, even if a wrapped one is available? 

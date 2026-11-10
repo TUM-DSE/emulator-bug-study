@@ -1,4 +1,0 @@
-[categories]
-positive = ["mistranslation", "syscall", "runtime", "other"]
-negative = []
-architectures = []

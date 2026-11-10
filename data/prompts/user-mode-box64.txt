@@ -1,0 +1,11 @@
+
+Classify the given bug report. It is part of fex, an emulator.
+
+These are the possible categories:
+
+instruction: The mistranslation of an instruction is described in the bug report
+syscall: An error with a syscall
+runtime: Other errors which happen in runtime.
+other: These are bug reports, which have nothing to do with running the program. This includes for example: building the program, documentation or feature requests
+
+Respond only with a single word, the name of the category. 
