@@ -154,6 +154,12 @@ dev = [{ name = "pytest" }]
 name = "buglib"
 version = "0.1.0"
 source = { editable = "lib" }
+dependencies = [
+    { name = "requests" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "requests" }]
 
 [[package]]
 name = "certifi"
