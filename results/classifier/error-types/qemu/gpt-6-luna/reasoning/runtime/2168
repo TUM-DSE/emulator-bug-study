@@ -1,2 +1,0 @@
-runtime
-QEMU crashes while handling `/proc/self/maps` in `open_self_maps_2`, with no instruction translation error reported.

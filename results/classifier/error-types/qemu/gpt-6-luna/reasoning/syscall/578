@@ -1,2 +1,0 @@
-syscall
-The report says `getdomainname()` returns “Function not implemented” under QEMU user mode, indicating the system call is unsupported or incorrectly handled.

@@ -1,2 +1,0 @@
-mistranslation
-The report traces the SIGTRAP to QEMU’s handling of the guest ARM BKPT instruction.

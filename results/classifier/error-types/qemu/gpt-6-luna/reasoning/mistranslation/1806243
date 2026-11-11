@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect Thumb IT-block conditional-branch behavior: the `blt.w` does not continue correctly when the registers are equal.

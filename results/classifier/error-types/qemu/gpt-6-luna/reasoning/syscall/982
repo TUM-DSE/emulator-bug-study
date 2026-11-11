@@ -1,2 +1,0 @@
-syscall
-The guest `writev` call succeeds, but `--strace` incorrectly decodes and displays its syscall arguments for 64-bit binaries.

@@ -1,2 +1,0 @@
-mistranslation
-The report says valid 68020/68030 `fsave`/`frestore` instructions incorrectly raise an F-line exception because QEMU restricts them to 68040.

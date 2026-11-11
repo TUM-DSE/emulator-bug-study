@@ -1,2 +1,0 @@
-mistranslation
-The failure is triggered by translating the RVV `vfncvt.rtz.x.f.w` instruction, which aborts in the RISC-V translator.

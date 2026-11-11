@@ -1,2 +1,0 @@
-mistranslation
-The guest raises SIGILL at the valid AVX instruction `vzeroupper`, indicating QEMU incorrectly emulates or decodes that instruction.

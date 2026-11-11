@@ -1,2 +1,0 @@
-mistranslation
-The report attributes the spinlock failure to QEMU’s emulation of the atomic test-and-set instruction, which behaves correctly on physical ARM64.

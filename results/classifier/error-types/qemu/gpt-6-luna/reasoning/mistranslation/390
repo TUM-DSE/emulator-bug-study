@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect instruction behavior: the atomic Load Quadword path requires write permission for an address that should only need read permission.

@@ -1,2 +1,0 @@
-mistranslation
-The report shows the SME `fmopa` operation on tile 1 produces zeros instead of the expected outer-product values, while tile 0 works.

@@ -1,2 +1,0 @@
-syscall
-The report identifies incorrect `getsockopt` handling for the `SO_RCVTIMEO_NEW` and `SO_SNDTIMEO_NEW` socket options.

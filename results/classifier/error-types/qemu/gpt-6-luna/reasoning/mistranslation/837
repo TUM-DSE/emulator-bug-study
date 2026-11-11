@@ -1,2 +1,0 @@
-mistranslation
-The report identifies `icebp` (`F1`) as being emulated with the wrong exception signal: QEMU raises `SIGILL` instead of the `SIGTRAP` corresponding to `#DB`.

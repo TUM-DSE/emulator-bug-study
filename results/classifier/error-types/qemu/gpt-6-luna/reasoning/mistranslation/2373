@@ -1,2 +1,0 @@
-mistranslation
-The report traces the incorrect result to FMOPA widening conversion using FZ instead of FZ16 when handling 16-bit source elements.

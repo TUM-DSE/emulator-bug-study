@@ -1,2 +1,0 @@
-mistranslation
-The SVE-optimized string functions return incorrect results under QEMU, and the failure changes with the emulated vector length.

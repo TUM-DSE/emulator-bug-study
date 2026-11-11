@@ -1,2 +1,0 @@
-syscall
-The report traces the failure to `lstat("/")` being mapped incorrectly by `follow_path()`, which handles a system call path.

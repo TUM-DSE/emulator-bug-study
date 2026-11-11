@@ -1,2 +1,0 @@
-syscall
-The report says memory passed to syscalls is incorrectly required to be readable when the syscall should only need write access.

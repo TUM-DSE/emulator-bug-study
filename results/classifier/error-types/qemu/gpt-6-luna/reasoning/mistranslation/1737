@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect signed results from emulating the SVE2 `ssra` instruction at larger vector lengths.

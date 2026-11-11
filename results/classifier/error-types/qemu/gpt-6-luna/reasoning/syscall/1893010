@@ -1,2 +1,0 @@
-syscall
-The report says OFD fcntl lock commands are unsupported and return EINVAL, implicating the conversion of fcntl commands in `target_to_host_fcntl_cmd`.

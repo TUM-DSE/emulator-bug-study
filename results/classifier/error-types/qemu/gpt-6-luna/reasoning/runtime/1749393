@@ -1,2 +1,0 @@
-runtime
-The report describes bash failing under qemu-user with its `sbrk()`-based allocator, but does not trace the cause to an incorrectly emulated instruction or system call.

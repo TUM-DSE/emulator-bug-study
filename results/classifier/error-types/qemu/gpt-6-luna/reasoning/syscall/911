@@ -1,2 +1,0 @@
-syscall
-The report identifies `execve` syscall tracing as failing because the successful `safe_execve` call does not return to complete the trace output.

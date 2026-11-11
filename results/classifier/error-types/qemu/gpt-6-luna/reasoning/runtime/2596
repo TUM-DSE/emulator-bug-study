@@ -1,2 +1,0 @@
-runtime
-The report concerns ELF parsing and PT_GNU_PROPERTY notes, not instruction translation or system-call emulation.

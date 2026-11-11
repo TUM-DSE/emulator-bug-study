@@ -1,2 +1,0 @@
-syscall
-The failure occurs while SVN reads a directory, returning “Value too large for defined data type,” which points to incorrect handling of a filesystem-related system call or its data.

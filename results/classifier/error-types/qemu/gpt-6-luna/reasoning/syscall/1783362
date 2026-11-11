@@ -1,2 +1,0 @@
-syscall
-The guest `mmap` call with `len==0` returns `0` instead of the expected `MAP_FAILED` (`-1`) and `errno` value.

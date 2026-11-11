@@ -1,2 +1,0 @@
-syscall
-The report attributes `readdir()` returning `NULL` with `EOVERFLOW` to the 32-bit guest running on a 64-bit host, indicating incorrect handling of a system-call interface.

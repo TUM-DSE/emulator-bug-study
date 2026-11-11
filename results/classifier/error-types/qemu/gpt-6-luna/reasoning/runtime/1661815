@@ -1,2 +1,0 @@
-runtime
-The report identifies a dangling pointer to a stack variable in `translate_one`, not incorrect emulation of an instruction or system call.

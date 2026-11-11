@@ -1,2 +1,0 @@
-runtime
-The report concerns QEMU’s memory-allocation helpers, not guest instruction translation or system-call emulation.

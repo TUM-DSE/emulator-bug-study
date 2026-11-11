@@ -1,2 +1,0 @@
-mistranslation
-The report says QEMU raises a tag-check fault for an SP-based store, although the architecture requires that access to be tag-unchecked.

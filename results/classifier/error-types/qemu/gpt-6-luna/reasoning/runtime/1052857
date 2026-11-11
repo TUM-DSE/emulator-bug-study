@@ -1,2 +1,0 @@
-runtime
-The failure occurs in signal-frame setup when QEMU’s assertion rejects the signal handler address; the report does not trace it to an instruction or system call.

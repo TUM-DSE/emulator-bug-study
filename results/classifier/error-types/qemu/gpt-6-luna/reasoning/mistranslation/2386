@@ -1,2 +1,0 @@
-mistranslation
-The report shows QEMU produces an incorrect result when emulating the guest `SLL` instruction.

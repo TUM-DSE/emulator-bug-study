@@ -1,2 +1,0 @@
-runtime
-The segfault occurs in QEMU’s vm86 interrupt-handling path when it writes to guest memory, rather than being attributed to incorrect emulation of a specific guest instruction or system call.

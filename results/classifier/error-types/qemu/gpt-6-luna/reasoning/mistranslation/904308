@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect ZF handling in QEMU’s translation of x86 BT/BTS/BTR/BTC instructions.

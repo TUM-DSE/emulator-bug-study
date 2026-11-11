@@ -1,2 +1,0 @@
-runtime
-The report concerns interleaving of syscall log output with page-log messages, not incorrect syscall emulation.

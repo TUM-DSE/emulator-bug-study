@@ -1,2 +1,0 @@
-mistranslation
-The report shows that redundant REX prefixes cause QEMU to select the wrong MMX register offset when translating instructions, producing incorrect guest results.

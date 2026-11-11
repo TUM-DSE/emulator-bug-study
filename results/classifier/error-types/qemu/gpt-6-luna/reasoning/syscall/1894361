@@ -1,2 +1,0 @@
-syscall
-The report says `pselect6_time64` is missing from syscall handling, leaving riscv32 without the pselect system call.

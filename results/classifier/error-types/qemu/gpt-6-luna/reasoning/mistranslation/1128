@@ -1,2 +1,0 @@
-mistranslation
-The report says `spr_write_xer()` omits flag bits from `cpu_xer` when emulating the guest `mtxer` instruction.

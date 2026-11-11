@@ -1,2 +1,0 @@
-syscall
-The failure is attributed to network namespace setup, which relies on system calls QEMU may not support or may handle incorrectly.

@@ -1,2 +1,0 @@
-mistranslation
-The report says EXT on a V register leaves the upper bits of the corresponding SVE register set, contrary to the instruction’s required behavior.

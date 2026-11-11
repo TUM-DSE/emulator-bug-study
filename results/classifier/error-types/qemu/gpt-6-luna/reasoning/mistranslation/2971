@@ -1,2 +1,0 @@
-mistranslation
-The invalid `vldi` immediate is decoded as an instruction and triggers a QEMU assertion, whereas hardware raises SIGILL.

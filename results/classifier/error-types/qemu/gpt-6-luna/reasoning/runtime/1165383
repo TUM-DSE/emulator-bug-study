@@ -1,2 +1,0 @@
-runtime
-The report only says that the QEMU executable segfaults and does not trace the failure to an instruction or system call.

@@ -1,2 +1,0 @@
-mistranslation
-The guest’s floating-point division produces an incorrect result under QEMU user-mode, printing 2.0 instead of 0.5.

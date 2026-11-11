@@ -1,2 +1,0 @@
-runtime
-The report shows a crash in a PulseAudio application and an assertion failure in `pa_mutex_unlock`, but does not trace the cause to a specific guest instruction or system call.

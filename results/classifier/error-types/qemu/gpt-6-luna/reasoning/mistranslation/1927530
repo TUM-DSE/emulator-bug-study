@@ -1,2 +1,0 @@
-mistranslation
-The AArch64 MTE tag mismatch is not reported as expected, indicating incorrect emulation of the guest memory access or its tag-check behavior.

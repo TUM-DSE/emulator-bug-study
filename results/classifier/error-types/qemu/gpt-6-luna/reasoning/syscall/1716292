@@ -1,2 +1,0 @@
-syscall
-The `write` system call with a null buffer and zero length returns `-1` under QEMU instead of the host’s `0`.

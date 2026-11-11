@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect results from specific VSX float-to-integer instructions when NaNs are present.

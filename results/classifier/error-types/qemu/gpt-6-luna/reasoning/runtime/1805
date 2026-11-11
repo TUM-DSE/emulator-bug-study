@@ -1,2 +1,0 @@
-runtime
-The CI job selects the native x86_64 compiler instead of the Hexagon cross-compiler, so it does not build or test the intended guest architecture.

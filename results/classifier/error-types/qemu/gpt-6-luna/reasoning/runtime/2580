@@ -1,2 +1,0 @@
-runtime
-QEMU aborts in `gdb_find_static_feature()` while starting the guest; the report does not trace the failure to an instruction or system call.

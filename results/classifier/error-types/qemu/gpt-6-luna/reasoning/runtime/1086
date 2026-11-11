@@ -1,2 +1,0 @@
-runtime
-The report describes incorrect or permuted test results under emulation but does not trace the cause to a specific guest instruction or system call.

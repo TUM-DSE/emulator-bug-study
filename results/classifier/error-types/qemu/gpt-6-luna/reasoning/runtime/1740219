@@ -1,2 +1,0 @@
-runtime
-The delay comes from `init_guest_space()` repeatedly searching for a suitable guest address range, not from instruction emulation or a system call.

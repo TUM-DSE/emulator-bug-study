@@ -1,2 +1,0 @@
-syscall
-The report points to misaligned access while handling the `linux_dirent64` structure, which is part of syscall emulation.

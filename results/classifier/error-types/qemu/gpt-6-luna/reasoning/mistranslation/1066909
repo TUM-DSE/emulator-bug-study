@@ -1,2 +1,0 @@
-mistranslation
-The new MicroBlaze thread resumes at the clone system-call instruction instead of the following instruction, causing the instruction to be re-executed.

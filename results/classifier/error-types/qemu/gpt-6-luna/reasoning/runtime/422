@@ -1,2 +1,0 @@
-runtime
-The report only says MIPS MSA code fails with an illegal-instruction error and does not establish that QEMU misemulates a specific instruction.

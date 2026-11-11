@@ -1,2 +1,0 @@
-runtime
-The report describes QEMU crashing during `git clone` but does not trace the failure to a specific guest instruction or system call.

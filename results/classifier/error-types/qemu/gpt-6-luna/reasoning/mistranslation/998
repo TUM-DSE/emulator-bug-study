@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect AArch64 BTI behavior: QEMU-user does not enforce the SCTLR_EL1.BT0 landing-pad restriction for the PACIASP instruction.

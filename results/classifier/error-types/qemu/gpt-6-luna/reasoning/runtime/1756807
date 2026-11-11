@@ -1,2 +1,0 @@
-runtime
-The report describes a large performance regression while running under QEMU and proot, but does not trace it to an incorrectly emulated instruction or system call.

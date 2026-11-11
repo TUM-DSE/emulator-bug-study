@@ -1,2 +1,0 @@
-mistranslation
-The report says QEMU executes the illegal instruction at the fall-through address instead of taking the preceding `jal`.

@@ -1,0 +1,13 @@
+
+Classify the given bug report. It is a mistranslation bug and part of the emulator qemu.
+
+These are the possible categories that describe the symptom of a bug:
+
+crash: this bug leads to a crash of the program
+vector: the instruction is a vectorized one
+register: it is a non-vectorized instruction, returning a wrong result in register
+memory: the mistranslation has something to do with memory
+flag: the mistranslation has something to do with flags
+other? if you are sure that the bug doesn't fit into any of the given categories, you can propose a new one.
+
+Respond only with a single word, the name of the category. 

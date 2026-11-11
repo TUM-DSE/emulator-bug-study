@@ -1,2 +1,0 @@
-runtime
-The report concerns the QEMU gdbstub’s handling of dynamically linked shared-library information, not guest instruction translation or a system call.

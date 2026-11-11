@@ -1,2 +1,0 @@
-runtime
-The report traces the crashes, packet corruption, and hangs to concurrent signal handling in QEMU’s gdbstub, not to guest instruction translation or a system call.

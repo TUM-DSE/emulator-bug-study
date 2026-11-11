@@ -1,2 +1,0 @@
-runtime
-The report describes QEMU failing to deliver a signal while returning from `pselect`, a signal-delivery failure.

@@ -1,2 +1,0 @@
-mistranslation
-The report shows `xor %eax,%eax` produces an incorrect parity flag under QEMU, while the same test with `sub %eax,%eax` behaves correctly.

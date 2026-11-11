@@ -1,2 +1,0 @@
-runtime
-The `openat` path `/` is incorrectly remapped to `QEMU_LD_PREFIX`, indicating a path-handling issue rather than instruction translation or syscall emulation.

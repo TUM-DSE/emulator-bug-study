@@ -1,2 +1,0 @@
-syscall
-The hang follows a `FUTEX_UNLOCK_PI` call that returns `ENOSYS` (“Function not implemented”), indicating incorrect futex system-call handling.

@@ -1,2 +1,0 @@
-runtime
-The report concerns incorrect guest address-space reservation for a nonexistent AArch64 commpage, not instruction translation or system-call emulation.

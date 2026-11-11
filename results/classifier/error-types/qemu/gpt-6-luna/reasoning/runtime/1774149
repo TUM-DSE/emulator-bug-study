@@ -1,2 +1,0 @@
-runtime
-The failure is in GDB-stub register access and debug-memory writes needed for function calls, not in guest instruction translation or a system call.

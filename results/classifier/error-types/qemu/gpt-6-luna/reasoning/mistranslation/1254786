@@ -1,2 +1,0 @@
-mistranslation
-QEMU aborts on guest instruction `ebc0`, indicating it does not correctly decode or implement an instruction the m68k program executes.

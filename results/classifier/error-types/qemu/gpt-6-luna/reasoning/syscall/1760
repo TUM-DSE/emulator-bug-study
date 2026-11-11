@@ -1,2 +1,0 @@
-syscall
-The old i386 `mmap` syscall’s argument block is decoded incorrectly: QEMU reports different arguments from `strace` for the same call.

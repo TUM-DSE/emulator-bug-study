@@ -1,2 +1,0 @@
-mistranslation
-The `denbcdq` instruction produces a different third result under QEMU than on native ppc64le for the same inputs.

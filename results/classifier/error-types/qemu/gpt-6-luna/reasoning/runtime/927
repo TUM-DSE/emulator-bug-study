@@ -1,2 +1,0 @@
-runtime
-QEMU returns a file descriptor that was closed during ELF loading, due to its handling of `/proc/self/exe` and `AT_EXECFD`.

@@ -1,2 +1,0 @@
-mistranslation
-The report says QEMU executes an SSE2 `movsd` instruction on a Pentium III CPU model instead of raising SIGILL.

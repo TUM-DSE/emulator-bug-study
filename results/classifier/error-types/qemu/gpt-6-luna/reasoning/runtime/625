@@ -1,2 +1,0 @@
-runtime
-The report shows an incorrect result from `pow()` but does not trace it to a specific guest instruction or system call.

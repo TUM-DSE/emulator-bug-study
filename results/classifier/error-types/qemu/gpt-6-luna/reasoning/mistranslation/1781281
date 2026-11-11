@@ -1,2 +1,0 @@
-mistranslation
-Changing `vec_sub` to `vec_subs` triggers SIGILL under QEMU, while the code runs on POWER9, pointing to incorrect handling of the guest instruction.

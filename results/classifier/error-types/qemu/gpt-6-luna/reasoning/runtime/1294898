@@ -1,2 +1,0 @@
-runtime
-The report concerns GTK menu-bar visibility and accelerator handling in QEMU’s graphical UI, not guest instruction translation or system calls.

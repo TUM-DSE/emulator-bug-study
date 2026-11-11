@@ -1,2 +1,0 @@
-mistranslation
-The report traces the incorrect result to QEMU setting the s390x subtraction overflow condition code incorrectly.

@@ -1,2 +1,0 @@
-mistranslation
-The report says TCG emulates `mov` to the GS segment register with the wrong effect on the segment base for AMD CPUs.

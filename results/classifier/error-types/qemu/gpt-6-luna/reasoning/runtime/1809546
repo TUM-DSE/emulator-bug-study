@@ -1,2 +1,0 @@
-runtime
-The report attributes the byte-write behavior to PL011 device-register handling in `pl011_write`, not to guest instruction translation or a system call.

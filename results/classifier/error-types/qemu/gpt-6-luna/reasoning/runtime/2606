@@ -1,2 +1,0 @@
-runtime
-The report describes QEMU failing to compile and launch on Darwin PowerPC due to assembly syntax and ABI/build issues, not incorrect guest instruction emulation or a specific syscall.

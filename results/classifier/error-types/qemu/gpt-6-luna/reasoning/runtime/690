@@ -1,2 +1,0 @@
-runtime
-QEMU fails while allocating the guest commpage, before the report identifies any incorrectly emulated instruction or system call.

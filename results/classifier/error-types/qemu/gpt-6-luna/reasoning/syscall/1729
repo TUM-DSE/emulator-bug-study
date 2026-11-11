@@ -1,2 +1,0 @@
-syscall
-The failure is specifically that `mremap` returns `EFAULT` for a range overlapping the stack guard, unlike the kernel.

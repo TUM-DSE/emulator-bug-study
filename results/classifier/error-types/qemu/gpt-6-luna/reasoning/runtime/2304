@@ -1,2 +1,0 @@
-runtime
-QEMU reports inconsistent CPU features through `getauxval`: disabling SVE leaves SVE2 advertised, and the report does not trace this to instruction emulation or a system call.

@@ -1,2 +1,0 @@
-syscall
-The report says the `pread` system call returns 0 with `errno=2` instead of returning 1.

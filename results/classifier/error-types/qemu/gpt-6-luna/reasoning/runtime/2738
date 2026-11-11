@@ -1,2 +1,0 @@
-runtime
-The report describes the Go build hanging under qemu-user but does not trace it to an incorrectly emulated instruction or system call.

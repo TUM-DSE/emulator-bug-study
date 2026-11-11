@@ -1,2 +1,0 @@
-runtime
-The report describes a compile-time macro redefinition warning, not an instruction-emulation or system-call behavior error.

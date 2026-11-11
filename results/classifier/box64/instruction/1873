@@ -1,0 +1,3 @@
+
+About emulating AVX instructions on RISC-V
+Now that RISC-V dynarec supports vector instructions, will AVX be emulated with scalar instructions?

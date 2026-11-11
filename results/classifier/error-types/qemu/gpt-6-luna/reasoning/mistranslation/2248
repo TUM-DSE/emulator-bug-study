@@ -1,2 +1,0 @@
-mistranslation
-The reported wrong result comes from incorrect execution of the AArch64 instruction sequence, which should produce `-1`.
