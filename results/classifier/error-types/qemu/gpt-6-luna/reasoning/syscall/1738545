@@ -1,2 +1,0 @@
-syscall
-The Go binary fails during `mmap` with errno 9 under qemu-user, indicating an incorrect emulation or passthrough of the mmap system call.

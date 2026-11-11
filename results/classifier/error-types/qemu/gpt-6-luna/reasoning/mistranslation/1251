@@ -1,2 +1,0 @@
-mistranslation
-The Octeon binary raises SIGILL because QEMU does not correctly support the Octeon-specific instruction it uses.

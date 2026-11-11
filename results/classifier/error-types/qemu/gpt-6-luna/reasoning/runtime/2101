@@ -1,2 +1,0 @@
-runtime
-The report says `ls` produces an incorrect result but does not trace it to an instruction or system call.

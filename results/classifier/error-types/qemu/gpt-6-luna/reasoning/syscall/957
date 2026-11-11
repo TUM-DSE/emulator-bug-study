@@ -1,2 +1,0 @@
-syscall
-The failure is traced to futex calls returning `EINVAL` (“Invalid argument”), which points to incorrect system-call emulation or argument handling.

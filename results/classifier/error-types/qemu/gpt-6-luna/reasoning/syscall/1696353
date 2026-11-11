@@ -1,2 +1,0 @@
-syscall
-The failure is traced to Go’s `clone` call omitting `CLONE_SYSVMEM`, causing QEMU’s clone flag checks to reject it.

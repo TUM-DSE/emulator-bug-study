@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect results from the SVE `SDOT`/`UDOT` instruction with 64-bit destination elements, while other emulators produce the expected results.

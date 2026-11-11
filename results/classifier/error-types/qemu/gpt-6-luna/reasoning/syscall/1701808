@@ -1,2 +1,0 @@
-syscall
-The report attributes the stack overwrite to `recvmsg` storing more data than the guest buffer allows under qemu-aarch64.

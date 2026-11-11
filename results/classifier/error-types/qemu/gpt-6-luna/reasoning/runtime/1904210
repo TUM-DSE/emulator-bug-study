@@ -1,2 +1,0 @@
-runtime
-The report shows SIGILL despite a registered handler, pointing to signal delivery or handling rather than an identified instruction translation error.

@@ -1,2 +1,0 @@
-syscall
-The guest’s `exec` of `/proc/self/exe` launches QEMU itself, which treats `--type=renderer` as a QEMU option instead of resolving the guest executable.

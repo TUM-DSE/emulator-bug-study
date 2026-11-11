@@ -1,2 +1,0 @@
-runtime
-The failure occurs nondeterministically in multi-threaded Go execution under QEMU, but the report does not trace it to a specific guest instruction or system call.

@@ -1,2 +1,0 @@
-mistranslation
-QEMU raises SIGILL for a valid SSE comparison instruction with an oversized immediate, instead of masking the unused bits as the hardware does.

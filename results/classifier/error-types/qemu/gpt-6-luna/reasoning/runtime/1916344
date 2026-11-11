@@ -1,2 +1,0 @@
-runtime
-The report attributes the premature TCP close to QEMU’s user-mode networking on macOS, not to a specific guest instruction or system call.

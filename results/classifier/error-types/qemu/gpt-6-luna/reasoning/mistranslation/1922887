@@ -1,2 +1,0 @@
-mistranslation
-The report identifies a Thumb32 STR encoding with `Rn == 1111` that QEMU fails to reject as undefined.

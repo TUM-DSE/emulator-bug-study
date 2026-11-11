@@ -1,2 +1,0 @@
-syscall
-Bash reports that `fork` fails with `EINVAL` under sparc32plus emulation.

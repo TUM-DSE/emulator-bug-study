@@ -1,2 +1,0 @@
-runtime
-The report describes linux-user failing to enforce executable page permissions during program execution, not an incorrect guest instruction or system call.

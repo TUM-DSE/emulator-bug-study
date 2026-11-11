@@ -1,2 +1,0 @@
-mistranslation
-The report identifies an incorrect RVV fractional LMUL check, which concerns instruction emulation.

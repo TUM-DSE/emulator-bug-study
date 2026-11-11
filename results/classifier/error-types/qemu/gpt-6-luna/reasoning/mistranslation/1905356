@@ -1,2 +1,0 @@
-mistranslation
-The report says ARM load/store instructions such as LDRD accept unaligned addresses instead of raising the required alignment fault.

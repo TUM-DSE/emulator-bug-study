@@ -1,2 +1,0 @@
-mistranslation
-The report attributes the math-test failures to QEMU’s x87 emulation computing trig and other complex operations at 64-bit rather than 80-bit precision.

@@ -1,2 +1,0 @@
-mistranslation
-The report says QEMU’s `sraw` translation fails to set the `ca` and `ca32` flags required by the instruction specification.

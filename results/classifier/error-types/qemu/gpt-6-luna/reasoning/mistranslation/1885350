@@ -1,2 +1,0 @@
-mistranslation
-The report identifies an instruction-emulation bug: dynamic rounding mode (`rm=7`) fails to update the rounding mode when `frm` changes.

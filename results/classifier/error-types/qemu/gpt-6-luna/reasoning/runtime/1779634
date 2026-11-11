@@ -1,2 +1,0 @@
-runtime
-The report shows an external abort while running the utility but does not trace it to a specific guest instruction or system call.

@@ -1,2 +1,0 @@
-syscall
-The report identifies `setsockopt` with `SOL_IP` and `IP_OPTIONS` as failing because QEMU’s corresponding syscall-handling path is unimplemented.

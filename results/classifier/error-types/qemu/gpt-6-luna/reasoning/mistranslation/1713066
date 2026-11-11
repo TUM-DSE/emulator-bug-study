@@ -1,2 +1,0 @@
-mistranslation
-The report says `ldp` updates x0 before a fault, although the architecture requires address-generation registers to be restored when the exception is taken.

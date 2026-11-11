@@ -1,2 +1,0 @@
-syscall
-The report attributes the failure to QEMU’s `getsockopt` handling of a NULL `optval`, rather than to guest instruction emulation.

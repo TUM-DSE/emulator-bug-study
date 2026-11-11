@@ -1,2 +1,0 @@
-runtime
-The report observes an illegal-instruction signal while running the program but does not identify a specific instruction emulation error.

@@ -1,2 +1,0 @@
-runtime
-The report identifies incorrect signal-frame stack alignment during signal delivery, not an instruction or system-call emulation error.

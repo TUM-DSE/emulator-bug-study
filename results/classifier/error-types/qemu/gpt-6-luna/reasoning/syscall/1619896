@@ -1,2 +1,0 @@
-syscall
-The report identifies unsupported ancillary socket data, `IP_PKTINFO`, which is a missing system-call-related socket option/message feature.

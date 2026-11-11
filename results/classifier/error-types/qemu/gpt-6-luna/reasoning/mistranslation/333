@@ -1,2 +1,0 @@
-mistranslation
-The report identifies errors while executing the AArch64 compare-and-swap instruction routine `__aarch64_cas8_acq_rel`.

@@ -1,2 +1,0 @@
-runtime
-The report shows a multithreaded test assertion failure without tracing the cause to an instruction or system call.

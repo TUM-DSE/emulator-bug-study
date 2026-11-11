@@ -1,2 +1,0 @@
-syscall
-The report identifies syscall 186 as `sigaltstack` and says QEMU’s SH4 syscall handler treats it as unimplemented.

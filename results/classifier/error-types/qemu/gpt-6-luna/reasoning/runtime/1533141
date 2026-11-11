@@ -1,2 +1,0 @@
-runtime
-The report identifies bounds-checking and style issues in QEMU’s disassembler code, not incorrect guest instruction emulation or system-call handling.

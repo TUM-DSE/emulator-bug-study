@@ -1,2 +1,0 @@
-runtime
-The report attributes the crash to incorrect signal-frame layout and alignment, not to an instruction or system call.

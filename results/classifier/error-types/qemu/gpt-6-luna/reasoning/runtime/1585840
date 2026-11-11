@@ -1,2 +1,0 @@
-runtime
-The report shows shared-memory synchronization failures in multiprocess mode but does not trace them to a particular guest instruction or system call.

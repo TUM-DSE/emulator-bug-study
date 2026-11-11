@@ -1,2 +1,0 @@
-mistranslation
-The report says comparing floating-point memory operands produces an incorrect result under POWER9 emulation, indicating guest instruction behavior is wrong.

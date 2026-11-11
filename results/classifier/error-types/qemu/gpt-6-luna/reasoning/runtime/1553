@@ -1,2 +1,0 @@
-runtime
-The report describes a build failure caused by an undeclared function, not incorrect guest instruction or system-call emulation.

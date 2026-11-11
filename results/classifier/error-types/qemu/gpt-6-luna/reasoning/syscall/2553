@@ -1,2 +1,0 @@
-syscall
-The `setsockopt` handler incorrectly marshals `ip_mreqn` and passes an invalid interface index to the host system call.

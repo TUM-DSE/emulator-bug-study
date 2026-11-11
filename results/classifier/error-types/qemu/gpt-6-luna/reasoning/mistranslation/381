@@ -1,2 +1,0 @@
-mistranslation
-The report identifies an AArch64 instruction translator reaching an unreachable-code assertion while decoding a SIMD FP16 instruction.

@@ -1,2 +1,0 @@
-runtime
-The report establishes a hang and core dump with QEMU master but does not trace the failure to an instruction or system call.

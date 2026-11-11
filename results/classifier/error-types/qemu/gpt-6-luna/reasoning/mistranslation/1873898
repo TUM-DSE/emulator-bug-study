@@ -1,2 +1,0 @@
-mistranslation
-The report traces the missing SIGTRAP to QEMU incorrectly handling the guest BKPT instruction as a syscall.

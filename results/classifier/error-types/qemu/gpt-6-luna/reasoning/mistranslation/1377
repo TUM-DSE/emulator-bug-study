@@ -1,2 +1,0 @@
-mistranslation
-The report attributes the crash to QEMU accessing beyond the eight-byte operand when emulating CVTSD2SS at a page boundary.

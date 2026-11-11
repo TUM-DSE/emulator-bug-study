@@ -1,2 +1,0 @@
-runtime
-The report concerns QEMU’s calculation of the guest ELF program’s `brk` address, not instruction translation or system-call emulation.

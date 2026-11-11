@@ -1,2 +1,0 @@
-runtime
-The report describes QEMU user-mode processes deadlocking during concurrent forks, without tracing the cause to a guest instruction or system call.

@@ -1,2 +1,0 @@
-syscall
-The report shows that the guest `pwrite` call has no effect at a nonzero file position, indicating incorrect system-call emulation.

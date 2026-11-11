@@ -1,2 +1,0 @@
-runtime
-The failure occurs in QEMU’s `zero_bss` ELF-loading code, not during a guest instruction or system call.

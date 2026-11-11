@@ -1,2 +1,0 @@
-runtime
-The report describes a QEMU compilation failure involving libvixl and system headers, not incorrect guest instruction or system-call behavior.

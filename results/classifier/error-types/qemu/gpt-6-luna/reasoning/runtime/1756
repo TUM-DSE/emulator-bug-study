@@ -1,2 +1,0 @@
-runtime
-The report attributes the SIGSEGV to QEMU’s `do_brk()` runtime handling, which calls `memset()` on a nonexistent page—not to incorrect guest instruction emulation or syscall conversion.

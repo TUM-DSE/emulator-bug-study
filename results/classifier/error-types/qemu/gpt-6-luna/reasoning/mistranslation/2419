@@ -1,2 +1,0 @@
-mistranslation
-The instruction decoder treats the signed immediate as unsigned, so negative offsets are calculated incorrectly.

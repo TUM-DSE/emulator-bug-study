@@ -1,2 +1,0 @@
-mistranslation
-The report identifies `CALL FWORD PTR [ESP]` as behaving differently in QEMU than on real hardware and VMware.

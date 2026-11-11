@@ -1,2 +1,0 @@
-runtime
-The report describes `qemu-x86_64` failing to run `ls` in a chroot on a LoongArch host, without identifying an instruction or system-call emulation error.

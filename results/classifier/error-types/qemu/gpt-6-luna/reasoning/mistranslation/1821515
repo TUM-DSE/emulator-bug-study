@@ -1,2 +1,0 @@
-mistranslation
-QEMU mishandles floating-point instructions: NaN comparisons return true, and converting a float NaN to double produces a non-NaN.

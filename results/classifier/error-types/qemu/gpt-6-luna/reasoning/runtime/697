@@ -1,2 +1,0 @@
-runtime
-The report describes CPU initialization occurring before ELF CPU-type detection, an execution setup issue rather than an instruction translation or system-call error.

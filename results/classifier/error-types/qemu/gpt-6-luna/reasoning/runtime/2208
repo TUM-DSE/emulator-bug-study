@@ -1,2 +1,0 @@
-runtime
-The report concerns TCG plugin register-reading behavior: `qemu_plugin_read_register()` does not expose an updated PC for each instruction, rather than guest instruction execution being incorrect.

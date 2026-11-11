@@ -1,2 +1,0 @@
-syscall
-The failure is specifically in `shmat()` when it tries to map shared memory over QEMU’s reserved guest address space, implicating shared-memory syscall handling.

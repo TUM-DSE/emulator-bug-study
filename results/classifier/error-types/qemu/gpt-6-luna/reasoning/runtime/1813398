@@ -1,2 +1,0 @@
-runtime
-The hang occurs in QEMU’s pthread-at-fork handler, which starts a thread and calls `malloc` after `fork`; it is not caused by instruction translation or guest syscall emulation.

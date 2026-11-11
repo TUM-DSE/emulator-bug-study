@@ -1,2 +1,0 @@
-syscall
-The report says `setsockopt` mishandles the option length and converts option values as 4-byte integers instead of their actual structures.

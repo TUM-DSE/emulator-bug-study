@@ -1,2 +1,0 @@
-syscall
-QEMU’s `sendmsg` emulation omits the host call when `msg_iovlen` is zero, even though the message contains ancillary data.

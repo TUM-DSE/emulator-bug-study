@@ -1,2 +1,0 @@
-runtime
-The report only says the guest program segfaults; it does not trace the failure to an instruction or system call.

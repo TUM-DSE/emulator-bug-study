@@ -1,2 +1,0 @@
-runtime
-The report identifies broken signal handling, which is a runtime issue and does not trace the cause to an instruction or system call.

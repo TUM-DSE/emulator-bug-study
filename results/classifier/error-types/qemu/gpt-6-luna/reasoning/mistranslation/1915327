@@ -1,2 +1,0 @@
-mistranslation
-The report shows QEMU’s emulation of x86-64 `cmpxchg` incorrectly zero-extends EAX into RAX when the compared values are equal.

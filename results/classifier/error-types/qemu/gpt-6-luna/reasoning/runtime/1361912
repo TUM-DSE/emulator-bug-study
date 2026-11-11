@@ -1,2 +1,0 @@
-runtime
-The report only says QEMU crashes with a segmentation fault when running MIPS64 executables and does not trace the cause to an instruction or system call.

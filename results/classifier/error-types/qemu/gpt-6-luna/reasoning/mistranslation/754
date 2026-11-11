@@ -1,2 +1,0 @@
-mistranslation
-The report identifies `trapcs` instruction handling as changing control flow incorrectly: QEMU skips the following instructions and executes an instruction decoded from the wrong address.

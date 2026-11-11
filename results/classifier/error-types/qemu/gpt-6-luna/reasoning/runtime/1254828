@@ -1,2 +1,0 @@
-runtime
-The report describes a segmentation fault during the chroot/debootstrap run but does not trace it to a specific guest instruction or system call.

@@ -1,2 +1,0 @@
-mistranslation
-The report traces SIGILL to QEMU rejecting the valid MIPS `exts` instruction in the guest dynamic loader.

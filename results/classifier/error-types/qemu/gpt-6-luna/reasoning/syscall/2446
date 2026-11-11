@@ -1,2 +1,0 @@
-syscall
-QEMU returns `ENOSYS` for `set_robust_list` instead of handling the syscall and returning success for valid arguments.

@@ -1,2 +1,0 @@
-mistranslation
-QEMU translates `xvldi` incorrectly, producing alternating incorrect 32-bit words instead of replicating `0x800`.

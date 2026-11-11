@@ -1,2 +1,0 @@
-syscall
-The report identifies syscall 384 as `getrandom` and says QEMU reports it as unsupported.

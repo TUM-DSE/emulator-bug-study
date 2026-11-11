@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect emulation of the x86_64 `cmpxchg` instruction.

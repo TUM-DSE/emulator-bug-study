@@ -1,2 +1,0 @@
-runtime
-The AArch64 user-mode emulator rejects a 32-bit ARM ELF as an invalid architecture and lacks ARM CPU models; no instruction or syscall is implicated.

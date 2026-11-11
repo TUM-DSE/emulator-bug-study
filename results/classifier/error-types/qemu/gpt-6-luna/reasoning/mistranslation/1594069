@@ -1,2 +1,0 @@
-mistranslation
-The report says guest SIMD instructions are translated into scalar host instructions, identifying an issue in QEMU’s instruction translation and optimization.

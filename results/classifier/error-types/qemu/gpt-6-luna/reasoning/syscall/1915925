@@ -1,2 +1,0 @@
-syscall
-The HEAPINFO semihosting call incorrectly interprets its parameter register and writes the result block to the wrong address.

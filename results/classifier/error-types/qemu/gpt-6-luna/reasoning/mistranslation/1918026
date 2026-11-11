@@ -1,2 +1,0 @@
-mistranslation
-The report identifies incorrect emulation of the guest’s 32-bit AMO instructions, producing wrong results and memory updates.

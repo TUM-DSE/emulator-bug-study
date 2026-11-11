@@ -1,2 +1,0 @@
-mistranslation
-QEMU raises SIGILL for the valid `mffsl` instruction on POWER8, where hardware decodes it as `mffs`.

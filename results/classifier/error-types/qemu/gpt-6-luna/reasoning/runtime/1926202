@@ -1,2 +1,0 @@
-runtime
-The report shows an illegal-instruction signal but does not trace it to a specific guest instruction or establish that QEMU mistranslates one.

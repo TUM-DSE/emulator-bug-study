@@ -1,2 +1,0 @@
-syscall
-`io_queue_init` returns `ENOSYS` under emulation, indicating the guest’s libaio system call is unsupported or incorrectly handled.

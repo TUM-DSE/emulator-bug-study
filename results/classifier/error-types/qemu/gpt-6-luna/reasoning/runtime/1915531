@@ -1,2 +1,0 @@
-runtime
-The child hangs in GLib’s allocator after fork because its mutex is left locked; the report does not trace this to an incorrectly emulated instruction or system call.

@@ -1,2 +1,0 @@
-runtime
-The report describes an out-of-bounds access in `tcp_emu` while processing a packet, not an instruction-translation or system-call error.

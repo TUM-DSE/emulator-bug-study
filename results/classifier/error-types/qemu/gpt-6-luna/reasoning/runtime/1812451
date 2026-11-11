@@ -1,2 +1,0 @@
-runtime
-The report describes a TFTP path-validation vulnerability in QEMU’s runtime, not an instruction-emulation or system-call error.

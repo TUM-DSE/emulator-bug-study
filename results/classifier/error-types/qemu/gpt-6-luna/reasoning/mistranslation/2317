@@ -1,2 +1,0 @@
-mistranslation
-The report shows QEMU writes the ADDV result to the wrong guest register, unlike the instruction’s documented behavior and real hardware.

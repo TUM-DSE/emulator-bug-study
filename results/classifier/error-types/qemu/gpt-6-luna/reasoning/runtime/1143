@@ -1,2 +1,0 @@
-runtime
-The report attributes missed breakpoints to QEMU’s breakpoint checking and translation-block behavior, not to incorrect emulation of a guest instruction or system call.

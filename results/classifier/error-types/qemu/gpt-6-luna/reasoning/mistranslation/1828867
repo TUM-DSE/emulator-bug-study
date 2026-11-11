@@ -1,2 +1,0 @@
-mistranslation
-The report says REX-prefixed LAHF/SAHF are translated to use RSP instead of AH, contrary to hardware behavior.

@@ -1,2 +1,0 @@
-runtime
-The report concerns CPU selection based on ELF flags, not incorrect instruction emulation or system-call behavior.

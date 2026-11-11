@@ -1,2 +1,0 @@
-mistranslation
-The report traces the hang to `floatx80_sqrt`, indicating incorrect emulation of the guest square-root instruction.

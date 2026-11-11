@@ -1,2 +1,0 @@
-runtime
-The report concerns the QEMU GDB stub’s network address-family behavior, not guest instruction emulation or a system call.

@@ -1,2 +1,0 @@
-runtime
-The report concerns adding embedded macOS plist metadata to QEMU binaries, not instruction emulation or system-call behavior.

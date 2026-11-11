@@ -1,2 +1,0 @@
-mistranslation
-The guest’s null weak pointer leads QEMU to translate and execute code at address zero, where instruction-fetch fault handling hangs in `gen_intermediate_code`.

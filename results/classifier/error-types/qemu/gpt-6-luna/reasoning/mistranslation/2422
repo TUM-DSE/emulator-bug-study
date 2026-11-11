@@ -1,2 +1,0 @@
-mistranslation
-The report traces the failure to QEMU’s handling of a specific `vsetvli` instruction: it does not set `vill` after the reserved instruction.

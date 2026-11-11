@@ -1,2 +1,0 @@
-runtime
-The report attributes the failure to QEMU’s musl build interacting with guest musl pthread cancellation, not to a specific guest instruction or system call.

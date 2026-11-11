@@ -1,2 +1,0 @@
-syscall
-The deadlocked guest threads are blocked in `safe_futex` while handling futex system calls.

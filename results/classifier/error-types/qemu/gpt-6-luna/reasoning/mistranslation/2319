@@ -1,2 +1,0 @@
-mistranslation
-The report traces the wrong SDIV result to the instruction helper treating the signed divisor as unsigned.

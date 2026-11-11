@@ -1,2 +1,0 @@
-runtime
-The failure is reported as QEMU being unable to allocate the guest commpage, a guest address-space/runtime issue rather than an instruction or system-call error.
